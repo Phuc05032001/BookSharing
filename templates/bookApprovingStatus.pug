@@ -1,0 +1,19 @@
+extends baseEmail
+
+block content
+  p Hi #{fullName},
+    p Your Book (#{bookTitle}) has been #{approvingStatus}.
+    p For more information, you can view in My Books section
+    br
+    table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+      tbody
+        tr
+          td(align='left')
+            table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+              tbody
+                tr
+                  td
+                    a(href=`${url}`, target='_blank') My Books
+    br
+    p If you have any problem, you can submit a feedback to BookSharing!
+    p - BookSharing, Customer Service Team
